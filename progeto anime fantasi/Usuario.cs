@@ -132,7 +132,7 @@ namespace progeto_anime_fantasi
                         int linhasAfetadas = cmd.ExecuteNonQuery();
                         if (linhasAfetadas > 0)
                         {
-                            MessageBox.Show("Registro de dados, realizado com sucesso.", "Cadastro de Dados", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("Registro  de dados, realizado com sucesso.", "Cadastro de Dados", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             return true;
                         }
 
