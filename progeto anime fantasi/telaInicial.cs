@@ -24,7 +24,7 @@ namespace progeto_anime_fantasi
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
-            frmRegistro Registro = new frmRegistro();
+            Registro Registro = new Registro();
             Registro.Show();
             this.Hide();
         }
