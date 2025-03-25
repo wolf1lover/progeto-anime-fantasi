@@ -40,6 +40,7 @@ namespace progeto_anime_fantasi
                 DataLancamentoAnime = tbxDataLancamento.Text,
                 AvaliacaoAnime = tbxAvaliacao.Text,
                 EpisodiosAnime = tbxEpisodios.Text,
+                AnimeCategoria = tbxCategoria.Text,
             };
 
             usuarioAtualizado.registerAnime();
@@ -54,9 +55,15 @@ namespace progeto_anime_fantasi
                 DataLancamentoAnime = tbxDataLancamento.Text,
                 AvaliacaoAnime = tbxAvaliacao.Text,
                 EpisodiosAnime = tbxEpisodios.Text,
+                AnimeCategoria = tbxCategoria.Text,
             };
 
             novosAnimes.registerAnime();
+        }
+
+        private void lblCategoria_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

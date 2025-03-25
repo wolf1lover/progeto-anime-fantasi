@@ -43,12 +43,14 @@
             this.tbxEpisodios = new System.Windows.Forms.TextBox();
             this.lblIDAnime = new System.Windows.Forms.Label();
             this.tbxIDAnime = new System.Windows.Forms.TextBox();
+            this.lblCategoria = new System.Windows.Forms.Label();
+            this.tbxCategoria = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnCriar
             // 
             this.btnCriar.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCriar.Location = new System.Drawing.Point(44, 455);
+            this.btnCriar.Location = new System.Drawing.Point(45, 512);
             this.btnCriar.Name = "btnCriar";
             this.btnCriar.Size = new System.Drawing.Size(102, 41);
             this.btnCriar.TabIndex = 0;
@@ -93,7 +95,7 @@
             // btnDeletar
             // 
             this.btnDeletar.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeletar.Location = new System.Drawing.Point(551, 455);
+            this.btnDeletar.Location = new System.Drawing.Point(552, 512);
             this.btnDeletar.Name = "btnDeletar";
             this.btnDeletar.Size = new System.Drawing.Size(102, 41);
             this.btnDeletar.TabIndex = 9;
@@ -104,7 +106,7 @@
             // btnAtualizar
             // 
             this.btnAtualizar.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAtualizar.Location = new System.Drawing.Point(280, 455);
+            this.btnAtualizar.Location = new System.Drawing.Point(281, 512);
             this.btnAtualizar.Name = "btnAtualizar";
             this.btnAtualizar.Size = new System.Drawing.Size(111, 41);
             this.btnAtualizar.TabIndex = 10;
@@ -180,11 +182,31 @@
             this.tbxIDAnime.Size = new System.Drawing.Size(308, 20);
             this.tbxIDAnime.TabIndex = 19;
             // 
+            // lblCategoria
+            // 
+            this.lblCategoria.AutoSize = true;
+            this.lblCategoria.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCategoria.Location = new System.Drawing.Point(45, 437);
+            this.lblCategoria.Name = "lblCategoria";
+            this.lblCategoria.Size = new System.Drawing.Size(98, 20);
+            this.lblCategoria.TabIndex = 20;
+            this.lblCategoria.Text = "Categoria";
+            this.lblCategoria.Click += new System.EventHandler(this.lblCategoria_Click);
+            // 
+            // tbxCategoria
+            // 
+            this.tbxCategoria.Location = new System.Drawing.Point(264, 440);
+            this.tbxCategoria.Name = "tbxCategoria";
+            this.tbxCategoria.Size = new System.Drawing.Size(308, 20);
+            this.tbxCategoria.TabIndex = 21;
+            // 
             // cadAnime
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(695, 571);
+            this.ClientSize = new System.Drawing.Size(695, 595);
+            this.Controls.Add(this.tbxCategoria);
+            this.Controls.Add(this.lblCategoria);
             this.Controls.Add(this.tbxIDAnime);
             this.Controls.Add(this.lblIDAnime);
             this.Controls.Add(this.tbxEpisodios);
@@ -224,5 +246,7 @@
         private System.Windows.Forms.TextBox tbxEpisodios;
         private System.Windows.Forms.Label lblIDAnime;
         private System.Windows.Forms.TextBox tbxIDAnime;
+        private System.Windows.Forms.Label lblCategoria;
+        private System.Windows.Forms.TextBox tbxCategoria;
     }
 }

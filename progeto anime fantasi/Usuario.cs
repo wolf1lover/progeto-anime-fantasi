@@ -32,6 +32,8 @@ namespace progeto_anime_fantasi
 
         public string EpisodiosAnime { get; set; }
 
+        public string AnimeCategoria { get; set; }  
+
 
 
         public static DataTable GetUsuario(string nome, string senha)
@@ -111,7 +113,7 @@ namespace progeto_anime_fantasi
         public bool registerAnime()
         {
 
-            var sql = "INSERT INTO cardanimes(AnimeAvaliacao, AnimeDataLancamento, EpisodiosAnime, ImagemAnime, AnimeNome) VALUES (@Avaliacao, @DataLancamento, @Episodios, @Imagem, @AnimeNome)";
+            var sql = "INSERT INTO cardanimes(AnimeAvaliacao, AnimeDataLancamento, EpisodiosAnime, ImagemAnime, AnimeNome, AnimeCategoria) VALUES (@Avaliacao, @DataLancamento, @Episodios, @Imagem, @AnimeNome, @AnimeCategoria)";
 
             try
             {
@@ -128,6 +130,7 @@ namespace progeto_anime_fantasi
                         cmd.Parameters.AddWithValue("@Episodios", this.EpisodiosAnime);
                         cmd.Parameters.AddWithValue("@Imagem", this.ImagemAnime);
                         cmd.Parameters.AddWithValue("@AnimeNome", this.NomeAnime);
+                        cmd.Parameters.AddWithValue("@AnimeCategoria", this.AnimeCategoria);
 
                         int linhasAfetadas = cmd.ExecuteNonQuery();
                         if (linhasAfetadas > 0)
