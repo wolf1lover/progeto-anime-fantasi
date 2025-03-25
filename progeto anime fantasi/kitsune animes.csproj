@@ -65,6 +65,12 @@
       <DependentUpon>cadAnime.cs</DependentUpon>
     </Compile>
     <Compile Include="Conn.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
     <Compile Include="T:\Cursos Tecnicos\9900308797_TEC_INFO_MANHA_T15052026\maycon\jogo\kitsune animes.cs">
       <SubType>Form</SubType>
       <Link>kitsune animes.cs</Link>
@@ -99,6 +105,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="cadAnime.resx">
       <DependentUpon>cadAnime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmEntrar.resx">
       <DependentUpon>frmEntrar.cs</DependentUpon>
