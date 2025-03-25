@@ -71,14 +71,6 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="T:\Cursos Tecnicos\9900308797_TEC_INFO_MANHA_T15052026\maycon\jogo\kitsune animes.cs">
-      <SubType>Form</SubType>
-      <Link>kitsune animes.cs</Link>
-    </Compile>
-    <Compile Include="T:\Cursos Tecnicos\9900308797_TEC_INFO_MANHA_T15052026\maycon\jogo\kitsune animes.Designer.cs">
-      <DependentUpon>kitsune animes.cs</DependentUpon>
-      <Link>kitsune animes.Designer.cs</Link>
-    </Compile>
     <Compile Include="telaInicial.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,10 +103,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmEntrar.resx">
       <DependentUpon>frmEntrar.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="T:\Cursos Tecnicos\9900308797_TEC_INFO_MANHA_T15052026\maycon\jogo\kitsune animes.resx">
-      <DependentUpon>kitsune animes.cs</DependentUpon>
-      <Link>kitsune animes.resx</Link>
     </EmbeddedResource>
     <EmbeddedResource Include="telaInicial.resx">
       <DependentUpon>telaInicial.cs</DependentUpon>
