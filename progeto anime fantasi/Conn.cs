@@ -9,7 +9,7 @@ namespace progeto_anime_fantasi
     public static class Conn
     {
         private const string servidor = "127.0.0.1";//localhost
-        private const string bancoDados = "dbbiblioteca";
+        private const string bancoDados = "kitsune_cardanimes";
         private const string usuario = "root";
         private const string senha = "";
 
