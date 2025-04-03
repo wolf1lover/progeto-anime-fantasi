@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace progeto_anime_fantasi
 {
-    public partial class Form1 : Form
+    public partial class cadAnimeTelaInicial : Form
     {
-        public Form1()
+        public cadAnimeTelaInicial()
         {
             InitializeComponent();
         }

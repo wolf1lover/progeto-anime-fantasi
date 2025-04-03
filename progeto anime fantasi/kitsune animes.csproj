@@ -52,6 +52,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CadAnimesLista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadAnimesLista.Designer.cs">
+      <DependentUpon>CadAnimesLista.cs</DependentUpon>
+    </Compile>
     <Compile Include="CatalogoDeAnimes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,11 +71,11 @@
       <DependentUpon>cadAnime.cs</DependentUpon>
     </Compile>
     <Compile Include="Conn.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="cadAnimeTelaInicial.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="cadAnimeTelaInicial.Designer.cs">
+      <DependentUpon>cadAnimeTelaInicial.cs</DependentUpon>
     </Compile>
     <Compile Include="telaInicial.cs">
       <SubType>Form</SubType>
@@ -92,14 +98,17 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Usuario.cs" />
+    <EmbeddedResource Include="CadAnimesLista.resx">
+      <DependentUpon>CadAnimesLista.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CatalogoDeAnimes.resx">
       <DependentUpon>CatalogoDeAnimes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="cadAnime.resx">
       <DependentUpon>cadAnime.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="cadAnimeTelaInicial.resx">
+      <DependentUpon>cadAnimeTelaInicial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmEntrar.resx">
       <DependentUpon>frmEntrar.cs</DependentUpon>
