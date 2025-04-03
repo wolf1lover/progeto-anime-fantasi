@@ -27,7 +27,7 @@ namespace progeto_anime_fantasi
                 IDAnime = Convert.ToInt32(tbxIDAnime.Text)
             };
 
-            usuarioRemovido.deleteUsuario();
+            usuarioRemovido.deleteAnime();
         }
 
         private void btnATUALIZAR_Click_1(object sender, EventArgs e)

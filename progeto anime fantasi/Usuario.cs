@@ -113,7 +113,7 @@ namespace progeto_anime_fantasi
         public bool registerAnime()
         {
 
-            var sql = "INSERT INTO cardanimes(AnimeAvaliacao, AnimeDataLancamento, EpisodiosAnime, ImagemAnime, AnimeNome, AnimeCategoria) VALUES (@Avaliacao, @DataLancamento, @Episodios, @Imagem, @AnimeNome, @AnimeCategoria)";
+            var sql = "INSERT INTO cardanimes(AnimeAvaliacao, AnimeDataLancamento, AnimeEpisodios, AnimeImagem, AnimeNome, AnimeCategorias) VALUES (@Avaliacao, @DataLancamento, @Episodios, @Imagem, @AnimeNome, @AnimeCategoria)";
 
             try
             {
@@ -221,6 +221,53 @@ namespace progeto_anime_fantasi
                         if (linhasAfetadas > 0)
                         {
                             MessageBox.Show("Usuário atualizado com sucesso.", "Atualização de Usuário", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            return true;
+                        }
+                    }
+
+                }
+
+
+            }
+
+            catch (MySqlException erro)
+            {
+                MessageBox.Show(erro.Message);
+            }
+            return false;
+        }
+
+        public bool deleteAnime()
+        {
+            if (this.IDAnime == 0)
+            {
+                MessageBox.Show("ID inválido", "Anime", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
+            string sql = "DELETE from cardanimes WHERE ID_Animes = @IDAnime";
+
+            try
+            {
+                using (var cn = new MySqlConnection(Conn.strConn))
+                {
+                    cn.Open();
+
+                    using (var cmd = new MySqlCommand(sql, cn))
+                    {
+                        cmd.Parameters.AddWithValue("@IDAnime", this.IDAnime);
+                        cmd.Parameters.AddWithValue("@Avaliacao", this.AvaliacaoAnime);
+                        cmd.Parameters.AddWithValue("@DataLancamento", this.DataLancamentoAnime);
+                        cmd.Parameters.AddWithValue("@Episodios", this.EpisodiosAnime);
+                        cmd.Parameters.AddWithValue("@Imagem", this.ImagemAnime);
+                        cmd.Parameters.AddWithValue("@AnimeNome", this.NomeAnime);
+                        cmd.Parameters.AddWithValue("@AnimeCategoria", this.AnimeCategoria);
+
+                        //ENQ Retorno qntidade de linhas afetadas
+                        int linhasAfetadas = cmd.ExecuteNonQuery();
+                        if (linhasAfetadas > 0)
+                        {
+                            MessageBox.Show("Anime removido com sucesso.", "Remoção de Anime", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             return true;
                         }
                     }
