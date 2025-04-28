@@ -65,5 +65,10 @@ namespace progeto_anime_fantasi
         {
 
         }
+
+        private void lblNomeAnime_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
