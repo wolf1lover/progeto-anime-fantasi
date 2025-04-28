@@ -16,7 +16,7 @@ namespace progeto_anime_fantasi
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new cadAnime());
+            Application.Run(new frmTelaInicial());
         }
     }
 }

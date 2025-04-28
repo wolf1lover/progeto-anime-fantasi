@@ -34,7 +34,7 @@ namespace progeto_anime_fantasi
         {
             Usuario usuarioAtualizado = new Usuario()
             {
-                IDregistro = Convert.ToInt32(tbxIDAnime.Text),
+                IDAnime = Convert.ToInt32(tbxIDAnime.Text),
                 ImagemAnime = tbxImagemAnime.Text,
                 NomeAnime = tbxNomeAnime.Text,
                 DataLancamentoAnime = tbxDataLancamento.Text,
@@ -43,7 +43,7 @@ namespace progeto_anime_fantasi
                 AnimeCategoria = tbxCategoria.Text,
             };
 
-            usuarioAtualizado.registerAnime();
+            usuarioAtualizado.updateAnime();
         }
 
         private void btnCriar_Click(object sender, EventArgs e)

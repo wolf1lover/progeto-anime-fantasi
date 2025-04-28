@@ -39,7 +39,7 @@ namespace progeto_anime_fantasi
         public static DataTable GetUsuario(string nome, string senha)
         {
             var dt = new DataTable();
-            var sql = "SELECT USU_IDUsuario, USU_Nome, USU_Senha FROM tbl_usuario WHERE USU_Nome = @Nome AND USU_Senha = @Senha";
+            var sql = "SELECT USU_IDUsuario, USU_Nome, USU_Senha FROM kitsune_registros WHERE USU_Nome = @Nome AND USU_Senha = @Senha";
 
             try
             {
@@ -284,5 +284,53 @@ namespace progeto_anime_fantasi
             return false;
         }
 
+        public bool updateAnime()
+        {
+            if (this.IDAnime == 0)
+            {
+                MessageBox.Show("Anime inválido", "Anime", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
+            string sql = "UPDATE cardanimes SET AnimeAvaliacao = @Avaliacao, AnimeDataLancamento = @DataLancamento, AnimeEpisodios = @Episodios, AnimeImagem = @Imagem, AnimeNome = @AnimeNome, AnimeCategorias = @AnimeCategoria WHERE ID_Animes = @IDAnime";
+
+            try
+            {
+                using (var cn = new MySqlConnection(Conn.strConn))
+                {
+                    cn.Open();
+
+                    using (var cmd = new MySqlCommand(sql, cn))
+                    {
+                        cmd.Parameters.AddWithValue("@IDAnime", this.IDAnime);
+                        cmd.Parameters.AddWithValue("@Avaliacao", this.AvaliacaoAnime);
+                        cmd.Parameters.AddWithValue("@DataLancamento", this.DataLancamentoAnime);
+                        cmd.Parameters.AddWithValue("@Episodios", this.EpisodiosAnime);
+                        cmd.Parameters.AddWithValue("@Imagem", this.ImagemAnime);
+                        cmd.Parameters.AddWithValue("@AnimeNome", this.NomeAnime);
+                        cmd.Parameters.AddWithValue("@AnimeCategoria", this.AnimeCategoria);
+
+                        //ENQ Retorno qntidade de linhas afetadas
+                        int linhasAfetadas = cmd.ExecuteNonQuery();
+                        if (linhasAfetadas > 0)
+                        {
+                            MessageBox.Show("Anime atualizado com sucesso.", "Atualização de Anime", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            return true;
+                        }
+                    }
+
+                }
+
+
+            }
+
+            catch (MySqlException erro)
+            {
+                MessageBox.Show(erro.Message);
+            }
+            return false;
+        }
     }
+
+   
 }

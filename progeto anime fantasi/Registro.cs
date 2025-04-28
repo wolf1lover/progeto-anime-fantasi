@@ -19,7 +19,38 @@ namespace progeto_anime_fantasi
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //recomendação criar váriaveis para componentesm, pq? Para tornar o código flexivel e limpo
+            string nomeUsuario = tbxNome.Text;
+            string senhaUsuario = tbxSenha.Text;
 
+            if (nomeUsuario == "" || tbxSenha.Text == "")
+            {
+                MessageBox.Show("Por favor, preencha o campo do Usuário ou Senha!", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+            }
+            else
+            {
+                DataTable usuario = Usuario.GetUsuario(nomeUsuario, senhaUsuario);
+                //MessageBox.Show(nomeUsuario);
+                //MessageBox.Show(senhaUsuario);
+
+
+                if (usuario.Rows.Count > 0)
+                {
+                    //Saber se o banco de dados foi acessado
+                    MessageBox.Show("Login feito com sucesso", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    catalogo_de_animes catalogo_de_animes = new catalogo_de_animes();
+                    catalogo_de_animes.Show();
+                    this.Hide();
+
+                }
+                else
+                {
+                    MessageBox.Show("Login não encontrado", "Login", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+
+            }
         }
 
         private void lblRegistro_Click(object sender, EventArgs e)
@@ -34,14 +65,14 @@ namespace progeto_anime_fantasi
 
         private void lblREGISTRAR_Click(object sender, EventArgs e)
         {
-            Usuario novosAnimes = new Usuario()
+            Usuario registerUsuario = new Usuario()
             {
                 Nome = tbxNome.Text,
-                NomeAnime = tbxSenha.Text,
+                Senha = tbxSenha.Text,
               
             };
 
-            novosAnimes.registerAnime();
+            registerUsuario.registerUsuario();
         }
     }
 }
